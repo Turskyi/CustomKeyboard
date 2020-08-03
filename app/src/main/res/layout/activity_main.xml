@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="300dp"
+            android:gravity="center">
+
+            <!-- SYSTEM KEYBOARDS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/labelMargin"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/labelTextSize"
+                android:textStyle="bold"
+                android:text="@string/systemKeyboardLabel"/>
+
+            <EditText
+                android:layout_width="@dimen/fieldWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fieldMarginBottom"
+                android:maxLength="20"
+                android:inputType="number"
+                android:hint="@string/systemNumber"
+                android:autofillHints="@string/systemNumber" />
+
+            <EditText
+                android:layout_width="@dimen/fieldWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fieldMarginBottom"
+                android:maxLength="20"
+                android:inputType="numberDecimal"
+                android:hint="@string/systemNumberDecimal"
+                android:autofillHints="@string/systemNumberDecimal" />
+
+            <EditText
+                android:layout_width="@dimen/fieldWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fieldMarginBottom"
+                android:maxLength="50"
+                android:inputType="text"
+                android:hint="@string/systemQwerty"
+                android:autofillHints="@string/systemQwerty" />
+
+
+            <!-- CUSTOM KEYBOARDS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/labelMargin"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/labelTextSize"
+                android:textStyle="bold"
+                android:text="@string/customKeyboardLabel"/>
+
+            <EditText
+                android:id="@+id/etNumberField"
+                android:layout_width="@dimen/fieldWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fieldMarginBottom"
+                android:maxLength="20"
+                android:hint="@string/customNumber"
+                android:autofillHints="@string/customNumber"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etNumberDecimalField"
+                android:layout_width="@dimen/fieldWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fieldMarginBottom"
+                android:maxLength="20"
+                android:hint="@string/customNumberDecimal"
+                android:autofillHints="@string/customNumberDecimal"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etQwertyField"
+                android:layout_width="@dimen/fieldWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fieldMarginBottom"
+                android:maxLength="50"
+                android:hint="@string/customQwerty"
+                android:autofillHints="@string/customQwerty"
+                android:inputType="text" />
+
+            <!-- SWITCH ACTIVITIES BUTTON -->
+            <Button
+                android:id="@+id/switchActivitiesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="@string/toAdvancedButtonText"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <io.github.turskyi.customkeyboard.components.keyboard.CustomKeyboardView
+        android:id="@+id/customKeyboardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
